@@ -1,0 +1,14 @@
+version: '2.4'
+services:
+  db:
+    image: mysql
+    container_name: anime_store
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "8080:3306"
+    volumes:
+      - anime_store_data:/var/lib/mysql
+
+volumes:
+  anime_store_data:
